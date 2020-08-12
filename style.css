@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    background: #fc0;
+    font-family: Stafford-Serial;
+}
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+}
+
+img {
+    display: inline-block;
+    height: 30vh;
+    width: 30vh;
+    position: absolute;
+    top:20%;
+    left:42%;
+    animation: bobHead .4s ease infinite;
+    transform-origin:bottom center;
+}
+@keyframes bobHead{
+    from,to{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+}
+
+.bodyFigurine{
+    display: grid;
+    place-items: center;
+}
+.neck{
+    height: 5%;
+    width: 10%;
+    position: absolute;
+    background: white;
+    top:48%;
+    left:50.5%;
+    an3imation: bobHead .2s ease infinite;
+}
+
+.upperBody{
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    background: black;
+    height: 15%;
+    width:20%;
+    position: absolute;
+    left: calc(50% - 4%);
+    top: 50%;
+}
+
+.collar{
+    position: absolute;
+    left: 22%;
+    box-sizing: border-box;
+    border-left: 25px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+    transform: rotate(-30deg);
+}
+
+.collar2{
+    position: absolute;
+    left: 48%;
+    box-sizing: border-box;
+    border-left: 25px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+    transform: rotate(-330deg);
+}
+
+
+.tie{
+    height:10%;
+    width: 20%;
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 81% 100%, 23% 100%);
+    background: blue;
+    left:38%;
+    top:5%;
+    z-index:-10;
+}
+
+
+.tie2{
+    height:60%;
+    width: 20%;
+    position: absolute;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+    background: blue;
+    left:38%;
+    top:5%;
+    z-index:-10;
+}
+
+.tie3{
+    height:10%;
+    width: 20%;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    background-color: blue;
+    position: absolute;
+    top: 64%;
+    left: 38%;
+}
+.arms{
+    border-radius: 50%;
+    height:5%;
+    width: 10%;
+    position: absolute;
+    background: black;
+    transform: rotate(-60deg);
+    left: 40%;
+    top:54%;
+}
+.arms::after{
+    content: "";
+    border-radius: 50%;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    background: black;
+    transform: rotate(-60deg);
+    left: 110%;
+    top:470%;
+}
+.legs{
+    height: 15%;
+    width: 9%;
+    background: black;
+    position: absolute;
+    top:64%;
+    left: 47%;
+}
+
+
+
+.legs::before{
+    content:"";
+    height: 100%;
+    width: 100%;
+    background: black;
+    position: absolute;
+    left: 105%;
+}
+
